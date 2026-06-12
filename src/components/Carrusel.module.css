@@ -1,0 +1,67 @@
+
+
+
+/* 1. EL CONTENEDOR PADRE (Mantiene el tamaño y centra el carrusel) */
+.contenedorCarrusel {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    /* Creamos el "colchón" de espacio a los lados para las flechas */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-block: 50px;
+    background-color: #F9F6F0;
+}
+
+/* 2. EL SWIPER (Ocupa el 100% del interior de su padre sin paddings raros) */
+.swiper {
+    width: 80%;
+}
+
+.swiperSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3. LOS BOTONES (Estilos de la burbuja externa) */
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+    color: black !important;
+    background-color: #3b82f6;
+    background-color: #F9F6F0;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: background-color 0.2s ease;
+}
+
+/* 4. POSICIONAMIENTO (Sacamos las flechas hacia el espacio del padding) */
+:global(.swiper-button-prev) {
+    left: 0px !important;
+}
+
+:global(.swiper-button-next) {
+    right: 0px !important;
+
+}
+
+/* 5. TAMAÑO DE LA FLECHA INTERNA (Cambiando el :global de posición) */
+:global(.swiper-button-next)::after,
+:global(.swiper-button-prev)::after {
+    /* font-size: 10px !important; */
+    width: 50%;
+
+     
+}
+
+
+/* 6. EFECTO HOVER */
+    :global(.swiper-button-next):hover,
+    :global(.swiper-button-prev):hover {
+        background-color: #1d4ed8;
+    }
+
+
+    
