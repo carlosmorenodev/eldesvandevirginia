@@ -1,0 +1,47 @@
+.heroSection {
+    background-image: url('/hero-degradado.jpg');
+    background-size: cover;
+    background-position: center 90% ;
+    background-repeat: no-repeat;
+    height: 600px;
+    color: #F9F6F0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.heroSectionContent {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.heroSectionButton {
+    background-color: #F9F6F0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: .6s ease;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+}
