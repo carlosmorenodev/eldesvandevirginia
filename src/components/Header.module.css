@@ -1,22 +1,36 @@
+/* ─── Header base ─────────────────────────────────────────────── */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    height: 100px;
+
     padding: 10px 50px;
 
-    position:sticky;
+    position: sticky;
     top: 0;
     background-color: #F9F6F0;
     z-index: 1000;
-    
 }
 
+/* ─── Logo ────────────────────────────────────────────────────── */
+.logo {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 20px;
+}
+
+/* ─── Título ──────────────────────────────────────────────────── */
 .headerTitle {
     font-family: var(--font-playfair), serif;
     text-transform: uppercase;
-color: #795376;
+    color: #795376;
+}
+
+/* ─── Nav escritorio ──────────────────────────────────────────── */
+.headerNav {
+    display: flex;
+    gap: 1.5rem;
 }
 
 .headerNavItem {
@@ -27,10 +41,159 @@ color: #795376;
     font-weight: 600;
     display: inline-block;
     transition: transform 0.3s ease, color 0.3s ease;
-    
-    
+
     &:hover {
         transform: translateY(-2px);
-        /* color: #C8C0AE; */
+    }
+}
+
+/* ─── Hamburguesa (oculta en escritorio) ──────────────────────── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1200;
+}
+
+.bar {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background-color: #795376;
+    border-radius: 2px;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+    transform-origin: center;
+}
+
+/* Animación X cuando está abierto */
+.hamburgerOpen .bar:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+.hamburgerOpen .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.hamburgerOpen .bar:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ─── Overlay ─────────────────────────────────────────────────── */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.overlayVisible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ─── Cortina lateral (drawer) ────────────────────────────────── */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100dvh;
+    background-color: #F9F6F0;
+    z-index: 1300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    box-shadow: -6px 0 24px rgba(121, 83, 118, 0.15);
+
+    /* Oculta hacia la derecha */
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.drawerOpen {
+    transform: translateX(0);
+}
+
+/* Botón cerrar dentro del drawer */
+.drawerClose {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #795376;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.drawerLogo {
+    margin-top: 0.5rem;
+}
+
+.drawerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    width: 100%;
+}
+
+.drawerNavItem {
+    text-decoration: none;
+    color: #795376;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+
+    &:hover {
+        transform: translateX(4px);
+        opacity: 0.75;
+    }
+}
+
+/* ─── Responsive: móvil ───────────────────────────────────────── */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+        position: sticky;
+    }
+
+    /* Ocultar logo absoluto y nav de escritorio */
+    .logo {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        top: unset;
+        left: unset;
+    }
+
+    .headerTitle {
+        font-size: 1rem;
+    }
+
+    .headerNav {
+        display: none;
+    }
+
+    /* Mostrar hamburguesa */
+    .hamburger {
+        display: flex;
     }
 }

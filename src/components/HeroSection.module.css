@@ -1,7 +1,7 @@
 .heroSection {
     background-image: url('/hero-degradado.jpg');
     background-size: cover;
-    background-position: center 90% ;
+    background-position: center 90%;
     background-repeat: no-repeat;
     height: 600px;
     color: #F9F6F0;
@@ -47,5 +47,15 @@
         /* transform: scale(0.95); */
         background-color: #7D6177;
         color: #F9F6F0;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSectionContent {
+        width: 100%;
+
+        & h2 {
+            font-size: 2rem;
+        }
     }
 }
