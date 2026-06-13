@@ -38,10 +38,14 @@
     padding: 10px 20px;
     text-decoration: none;
     color: black;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: .6s ease;
+    transition: .4s ease;
+    border-radius: 20px;
 
     &:hover {
-        transform: scale(0.95);
+        /* transform: scale(0.95); */
+        background-color: #7D6177;
+        color: #F9F6F0;
     }
 }

@@ -1,27 +1,40 @@
-
-
-
 /* 1. EL CONTENEDOR PADRE (Mantiene el tamaño y centra el carrusel) */
 .contenedorCarrusel {
+     background-image: url('/section-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -80px;
+
+
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: auto;
     /* Creamos el "colchón" de espacio a los lados para las flechas */
     padding-left: 60px;
     padding-right: 60px;
-    padding-block: 50px;
+    
+    padding-block: 40px;
     background-color: #F9F6F0;
 }
 
 /* 2. EL SWIPER (Ocupa el 100% del interior de su padre sin paddings raros) */
 .swiper {
     width: 80%;
+    padding-top: 90px;
 }
 
 .swiperSlide {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 40px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    
+}
+
+:global(.swiper-slide-active) {
+    opacity: 1;
 }
 
 /* 3. LOS BOTONES (Estilos de la burbuja externa) */
