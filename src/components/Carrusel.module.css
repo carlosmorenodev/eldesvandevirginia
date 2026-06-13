@@ -27,14 +27,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-    
+    padding-bottom: 40px;  
+    opacity: 20%;
 }
 
+
+.sliderImage {
+}
+
+
+
 :global(.swiper-slide-active) {
-    opacity: 1;
+    opacity: 100;
+    /* filter: brightness(100%); */
 }
 
 /* 3. LOS BOTONES (Estilos de la burbuja externa) */
