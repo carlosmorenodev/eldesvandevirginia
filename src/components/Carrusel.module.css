@@ -12,8 +12,7 @@
     /* Creamos el "colchón" de espacio a los lados para las flechas */
     padding-left: 60px;
     padding-right: 60px;
-
-    padding-block: 40px;
+    padding-top: 30px;
     background-color: #F9F6F0;
 }
 
@@ -87,17 +86,17 @@
     .contenedorCarrusel {
         width: 100%;
         background-position: center -20px;
-        padding:10px;
+        padding: 10px;
     }
 
     .swiper {
         width: 100%;
         padding-inline: 0px;
-        
+
     }
 
     .swiperSlide {
-        
+
         width: 100%;
     }
 
