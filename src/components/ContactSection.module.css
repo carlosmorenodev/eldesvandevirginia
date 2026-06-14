@@ -23,3 +23,10 @@
         color: #7D6177;;
     }
 }
+
+@media (max-width: 768px) {
+    .contactSection {
+        background-position: center -30px;
+        height: auto;
+    }
+}

@@ -1,6 +1,6 @@
 /* 1. EL CONTENEDOR PADRE (Mantiene el tamaño y centra el carrusel) */
 .contenedorCarrusel {
-     background-image: url('/section-background.svg');
+    background-image: url('/section-background.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center -80px;
@@ -12,7 +12,7 @@
     /* Creamos el "colchón" de espacio a los lados para las flechas */
     padding-left: 60px;
     padding-right: 60px;
-    
+
     padding-block: 40px;
     background-color: #F9F6F0;
 }
@@ -27,12 +27,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;  
+    padding-bottom: 40px;
     opacity: 20%;
 }
 
 
 .sliderImage {
+    border-radius: 22px;
 }
 
 
@@ -71,15 +72,37 @@
     /* font-size: 10px !important; */
     width: 50%;
 
-     
+
 }
 
 
 /* 6. EFECTO HOVER */
-    :global(.swiper-button-next):hover,
-    :global(.swiper-button-prev):hover {
-        background-color: #1d4ed8;
+:global(.swiper-button-next):hover,
+:global(.swiper-button-prev):hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+
+    .contenedorCarrusel {
+        width: 100%;
+        background-position: center -20px;
+        padding:10px;
     }
 
+    .swiper {
+        width: 100%;
+        padding-inline: 0px;
+        
+    }
 
-    
+    .swiperSlide {
+        
+        width: 100%;
+    }
+
+    .sliderImage {
+        border-radius: 22px;
+
+    }
+}

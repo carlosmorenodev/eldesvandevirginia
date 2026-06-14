@@ -81,7 +81,7 @@ export default function Carrusel() {
                 // Ajustes finos del efecto 3D:
                 coverflowEffect={{
                     rotate: 15,     // Grados de rotación de las slides de los lados
-                    stretch:-150,     // Espacio entre slides (puedes usar números negativos para encimarlas)
+                    stretch: -150,     // Espacio entre slides (puedes usar números negativos para encimarlas)
                     depth: 800,     // Profundidad en el eje Z (a más número, más pequeñas se ven las de los lados)
                     modifier: 1,    // Multiplicador del efecto
                     slideShadows: false, // Crea sombras realistas en las slides laterales
@@ -104,9 +104,9 @@ export default function Carrusel() {
             >
                 {imagenes.map((imagen) => (
                     <SwiperSlide className={styles.swiperSlide}>
-                        <div className={styles.sliderImage}>
-                            <Image src={imagen.src} width={400} height={400} style={{ borderRadius: "22px" }} />
-                        </div>
+                        {/* <div className={styles.sliderImage}> */}
+                        <Image className={styles.sliderImage} src={imagen.src} width={400} height={400} /* style={{ borderRadius: "22px" }} */ />
+                        {/* </div> */}
                     </SwiperSlide>
                 ))}
 

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
 
 }
 
@@ -51,11 +51,18 @@
 }
 
 @media (max-width: 768px) {
+    .heroSection {
+        height: 400px;
+        padding-inline: 20px;
+
+    }
+
     .heroSectionContent {
         width: 100%;
 
         & h2 {
             font-size: 2rem;
+            
         }
     }
 }
