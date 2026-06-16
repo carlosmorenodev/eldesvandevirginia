@@ -37,6 +37,7 @@ const Header = () => {
             {/* Nav escritorio */}
             <nav className={styles.headerNav}>
                 <Link className={styles.headerNavItem} href={'/'}>Inicio</Link>
+                <Link className={styles.headerNavItem} href={'/manualidades'}>Manualidades</Link>
                 {/* <Link>mis trabajos</Link> */}
             </nav>
 

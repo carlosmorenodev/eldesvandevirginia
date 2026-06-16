@@ -26,7 +26,7 @@ const ContactSection = () => {
   return (
     <section id="contacto" className={styles.contactSection}>
       {/* Decoración SVG superior */}
-      <div className={styles.waveTop} aria-hidden="true" />
+      {/* <div className={styles.waveTop} aria-hidden="true" /> */}
 
       <div className={styles.container}>
         {/* Columna izquierda – texto e info */}

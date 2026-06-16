@@ -10,18 +10,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top -80%;
+    background-position: center -5%;
 }
 
-/* ─── Ola decorativa superior ─────────────────────────────────── */
-.waveTop {
-    /* width: 100%;
-    height: 120px; */
-    /* background-image: url('/section-background.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -80%; */
-    /*  margin-bottom: 20px; */
-}
+
 
 /* ─── Contenedor ──────────────────────────────── */
 .container {
@@ -49,7 +41,9 @@
     font-family: var(--font-playfair), serif;
     font-style: italic;
     font-size: 1.1rem;
+    font-size: 2.8rem;
     color: #b09aad;
+    color: #7D6177;
     margin-bottom: 10px;
     letter-spacing: 0.05em;
 }
