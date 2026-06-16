@@ -2,10 +2,13 @@
     background-color: #DCD6C8;
     padding: 10px;
     
+    
     .footerContainer {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
+        
     }
         
 }
@@ -47,4 +50,10 @@
 
 .copyright {
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    .copyright {
+        padding-top: 20px;
+    }
 }

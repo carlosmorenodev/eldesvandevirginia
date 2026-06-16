@@ -10,13 +10,12 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContainer}>
-                <div className={styles.footerLogo}>
+               {/*  <div className={styles.footerLogo}>
                     <Image
-                        src='/logo-fondo-footer.jpg'
+                        src='/logo.jpg'
                         width={150}
                         height={150} />
-
-                </div>
+                </div> */}
 
                 <div className={styles.links}>
                     <Link className={styles.contactItem} href={'/avisolegal'}>Aviso Legal</Link>
@@ -76,6 +75,13 @@ const Footer = () => {
                     <span>@eldesvandevirginia</span>
                 </a>
             </div>
+
+            <div className={styles.footerLogo}>
+                    <Image
+                        src='/logo-morado.jpg'
+                        width={150}
+                        height={150} />
+                </div>
 
 
             </div>
