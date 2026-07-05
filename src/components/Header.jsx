@@ -39,6 +39,7 @@ const Header = () => {
                 <Link className={styles.headerNavItem} href={'/'}>Inicio</Link>
                 <Link className={styles.headerNavItem} href={'/manualidades'}>Manualidades</Link>
                 <Link className={styles.headerNavItem} href={'/aboutme'}>Sobre mí</Link>
+                <Link className={styles.headerNavItem} href={'/blog'}>Blog</Link>
                 {/* <Link>mis trabajos</Link> */}
             </nav>
 

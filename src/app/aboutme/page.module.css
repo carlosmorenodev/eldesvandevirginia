@@ -1,0 +1,45 @@
+.container {
+    padding: 100px;
+    padding-top: 0px;
+    width: 100%;
+    margin: auto;
+    background-image: url('/section-background4.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    width: 80%;
+    margin: auto;
+    /* background-image: url('/prueba.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.aboutMeImg {
+    border-radius: 50%;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.container p,
+.container li {
+    font-size: 2rem;
+    line-height: 50px;
+}
+
+.container hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
