@@ -1,0 +1,329 @@
+/* ─── Wrapper de página ────────────────────────────────────────── */
+.page {
+    background-color: #F9F6F0;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+/* ─── Hero con imagen de portada ───────────────────────────────── */
+.hero {
+    position: relative;
+    width: 100%;
+    height: clamp(280px, 45vw, 520px);
+    overflow: hidden;
+    background-color: #e8dde8;
+}
+
+.heroImage {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Degradado sobre la imagen */
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(249, 246, 240, 0) 40%,
+        rgba(249, 246, 240, 0.98) 100%
+    );
+}
+
+/* Placeholder cuando no hay coverImage */
+.heroPlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ede4ed 0%, #dcd6c8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholderIcon {
+    font-size: 4rem;
+    color: #b09aad;
+    opacity: 0.4;
+    user-select: none;
+}
+
+/* ─── Cabecera del artículo ────────────────────────────────────── */
+.header {
+    max-width: 780px;
+    margin: -60px auto 0;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-playfair), serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7D6177;
+    text-decoration: none;
+    margin-bottom: 28px;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.backLink:hover {
+    color: #5a3d57;
+    gap: 10px;
+}
+
+.date {
+    display: inline-block;
+    font-family: var(--font-playfair), serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #b09aad;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: var(--font-playfair), serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: #3d2e3b;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+/* Divisor decorativo */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 32px auto;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background-color: #d9cdd7;
+}
+
+.dividerIcon {
+    font-size: 0.9rem;
+    color: #b09aad;
+}
+
+/* ─── Cuerpo del artículo (MDX) ────────────────────────────────── */
+.content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+    font-family: var(--font-playfair), serif;
+    color: #3d2e3b;
+    line-height: 1.85;
+    font-size: 1.05rem;
+}
+
+/* Encabezados dentro del MDX */
+.content :global(h1),
+.content :global(h2),
+.content :global(h3),
+.content :global(h4) {
+    font-family: var(--font-playfair), serif;
+    color: #5a3d57;
+    line-height: 1.25;
+    margin-top: 2.4em;
+    margin-bottom: 0.8em;
+}
+
+.content :global(h1) { font-size: 2rem; font-weight: 700; }
+.content :global(h2) {
+    font-size: 1.55rem;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0d5de;
+}
+.content :global(h3) { font-size: 1.25rem; font-weight: 600; }
+.content :global(h4) { font-size: 1.05rem; font-weight: 600; }
+
+/* Párrafos */
+.content :global(p) {
+    margin-bottom: 1.4em;
+}
+
+/* Énfasis */
+.content :global(strong) {
+    font-weight: 700;
+    color: #5a3d57;
+}
+
+.content :global(em) {
+    font-style: italic;
+    color: #7D6177;
+}
+
+/* Links */
+.content :global(a) {
+    color: #7D6177;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.content :global(a:hover) {
+    color: #5a3d57;
+}
+
+/* Listas */
+.content :global(ul),
+.content :global(ol) {
+    padding-left: 1.6em;
+    margin-bottom: 1.4em;
+}
+
+.content :global(li) {
+    margin-bottom: 0.5em;
+}
+
+.content :global(ul li)::marker {
+    color: #b09aad;
+}
+
+/* Cita */
+.content :global(blockquote) {
+    border-left: 3px solid #b09aad;
+    margin: 2em 0;
+    padding: 1em 1.5em;
+    background-color: #f3edf3;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #6b5a68;
+}
+
+/* Código inline */
+.content :global(code) {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.9em;
+    background-color: #ece4ea;
+    color: #5a3d57;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
+/* Bloque de código */
+.content :global(pre) {
+    background-color: #2c1a2e;
+    color: #f3edf3;
+    padding: 24px;
+    border-radius: 16px;
+    overflow-x: auto;
+    margin: 2em 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.content :global(pre code) {
+    background: none;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Imágenes dentro del contenido */
+.content :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin: 2em 0;
+    box-shadow: 0 6px 32px rgba(44, 26, 46, 0.1);
+}
+
+/* Divisores hr */
+.content :global(hr) {
+    border: none;
+    border-top: 1px solid #d9cdd7;
+    margin: 2.5em 0;
+}
+
+/* Tablas */
+.content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(125, 97, 119, 0.08);
+}
+
+.content :global(thead) {
+    background-color: #7D6177;
+    color: #F9F6F0;
+}
+
+.content :global(th) {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-family: var(--font-playfair), serif;
+    letter-spacing: 0.03em;
+}
+
+.content :global(td) {
+    padding: 12px 18px;
+    border-bottom: 1px solid #e8dde8;
+    color: #4a3548;
+}
+
+.content :global(tbody tr:nth-child(even)) {
+    background-color: #f3edf3;
+}
+
+.content :global(tbody tr:last-child td) {
+    border-bottom: none;
+}
+
+/* ─── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .hero {
+        height: clamp(200px, 55vw, 320px);
+    }
+
+    .header {
+        margin-top: -40px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .content :global(table) {
+        font-size: 0.82rem;
+    }
+
+    .content :global(th),
+    .content :global(td) {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        margin-top: -24px;
+    }
+
+    .content {
+        padding: 0 16px;
+    }
+}

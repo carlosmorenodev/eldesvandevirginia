@@ -1,5 +1,197 @@
 .container {
-    padding: 100px;
-    width: 70%;
-    margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 100px;
+}
+
+/* ─── Cabecera ─────────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 700;
+  color: #3d2e3b;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 1rem;
+  color: #7D6177;
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ─── Grid de tarjetas ─────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 28px;
+}
+
+/* ─── Tarjeta ──────────────────────────────────────────────────── */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(125, 97, 119, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(125, 97, 119, 0.18);
+}
+
+.cardLink {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ─── Imagen de portada ────────────────────────────────────────── */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #ede4ed;
+}
+
+.coverImage {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .coverImage {
+  transform: scale(1.04);
+}
+
+/* ─── Placeholder sin imagen ───────────────────────────────────── */
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #ede4ed 0%, #dcd6c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderIcon {
+  font-size: 2.5rem;
+  color: #b09aad;
+  opacity: 0.5;
+}
+
+/* ─── Cuerpo de la tarjeta ─────────────────────────────────────── */
+.cardBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.date {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #b09aad;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.cardTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3d2e3b;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.description {
+  font-family: var(--font-playfair), serif;
+  font-size: 0.9rem;
+  color: #6b5a68;
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7D6177;
+  transition: color 0.2s ease;
+}
+
+.card:hover .readMore {
+  color: #5a3d57;
+}
+
+/* ─── Responsive: tablet ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 48px 16px 72px;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+}
+
+/* ─── Responsive: móvil ────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .container {
+    padding: 36px 12px 60px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Una columna, sin desbordamiento */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cardBody {
+    padding: 16px;
+  }
+
+  .cardTitle {
+    font-size: 1.15rem;
+  }
+
+  .description {
+    font-size: 0.88rem;
+    -webkit-line-clamp: 2;
+  }
 }

@@ -83,6 +83,12 @@ const Header = () => {
 
                 <div className={styles.drawerLinks}>
                     <Link className={styles.drawerNavItem} href={'/'} onClick={closeMenu}>Inicio</Link>
+                    <Link className={styles.drawerNavItem} href={'/manualidades'} onClick={closeMenu}>Manualidades</Link>
+                    <Link className={styles.drawerNavItem} href={'/aboutme'} onClick={closeMenu}>Sobre mí</Link>
+                    <Link className={styles.drawerNavItem} href={'/blog'} onClick={closeMenu}>Blog</Link>
+
+
+
                     {/* <Link className={styles.drawerNavItem} href={'/trabajos'} onClick={closeMenu}>Mis trabajos</Link> */}
                 </div>
             </nav>
